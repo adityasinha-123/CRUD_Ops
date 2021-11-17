@@ -42,7 +42,7 @@ public class EmployeeController {
 	}
 	
 	//build create employee REST API
-	@PostMapping()
+	@PostMapping("/addEmployee")
 	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee){
 		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee),HttpStatus.CREATED);
 
